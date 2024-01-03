@@ -15,26 +15,26 @@ class HomeController extends Controller
     {
         $query = request()->query('query');
 
-        if (Str::length($query) > 0) {
-            $q = '%' . $query . '%';
+        $pagination = Resource::query()
+            ->when($query, function ($queryBuilder) use ($query) {
+                $q = '%' . $query . '%';
+                return $queryBuilder
+                    ->where('title', 'like', $q)
+                    ->orWhere('author', 'like', $q)
+                    ->orWhere('description', 'like', $q);
+            })
+            ->with('category') // Eager load category for all resources
+            ->latest()
+            ->simplePaginate(20);
 
-            $pagination = Resource::query()
-                ->with('category')
-                ->where('title', 'like', $q)
-                ->orWhere('author', 'like', $q)
-                ->orWhere('description', 'like', $q)
-                ->latest()
-                ->simplePaginate(20);
-        } else {
-            $pagination = Resource::query()->latest()->simplePaginate(20);
-        }
-
-        if (request()->expectsJson())
+        if (request()->expectsJson()) {
             return $pagination;
-        else
+        } else {
             return Inertia::render('Public/EntryPoint', [
                 'query' => $query,
                 'pagination' => $pagination
             ]);
+        }
     }
 }
+

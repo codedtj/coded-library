@@ -3,13 +3,13 @@
         <div class="bg-white ">
             <Head title="Library" />
 
-            <div class="relative bg-white border-b-2 border-gray-100 ">
+            <div class="relative bg-stone-900 border-b-2 border-gray-100 ">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6">
                     <div
                         class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
                         <div class="lg:w-0 lg:flex-1">
                             <Link href="/" class="flex">
-                                <h1 class="font-bold md:text-xl">Central Asian Unit Library</h1>
+                                <img class="md:h-10 h-7" src="/images/logo.svg">
                             </Link>
                         </div>
                         <div class="-mr-2 -my-2 md:hidden">
@@ -21,9 +21,9 @@
                                 </svg>
                             </button>
                         </div>
-                        <nav class="hidden md:flex space-x-10 text-black font-bold" style="z-index: 100">
+                        <nav class="hidden md:flex space-x-10 text-white font-bold" style="z-index: 100">
                             <Link href="/"
-                                  class="text-base leading-6 font-medium  transition ease-in-out duration-150">
+                                  class="text-base leading-6  font-medium  transition ease-in-out duration-150">
                                 Home
                             </Link>
                             <Link href="/explore"
@@ -49,14 +49,11 @@
                 <div v-if="mobileMenuOpen"
                      class="absolute top-0 inset-x-0 z-50 transition transform origin-top-right md:hidden">
                     <div class="rounded-lg shadow-lg">
-                        <div class=" shadow-xs bg-slate-200 divide-y-2 divide-gray-50">
+                        <div class=" shadow-xs bg-stone-800 divide-y-2 divide-gray-50">
                             <div class="pt-5 pb-6 px-5 space-y-6">
                                 <div class="flex items-center justify-between">
                                     <div>
-<!--                                        <img class="h-4 w-auto"-->
-<!--                                             src="/img/point-logo-black.svg"-->
-<!--                                             alt="Workflow">-->
-                                        <h1 class="font-bold">Central Asian Unit Library</h1>
+                                        <img class="md:h-10 h-7" src="/images/logo.svg">
                                     </div>
                                     <div class="-mr-2">
                                         <button @click="mobileMenuOpen = !mobileMenuOpen" type="button"
@@ -69,7 +66,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <nav class="grid row-gap-8 gap-5 font-bold">
+                                    <nav class="grid row-gap-8 gap-5 font-bold text-white">
                                         <Link href="#"
                                               class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
                                             <div class="text-base leading-6 ">
@@ -122,12 +119,12 @@
 
         </div>
     </div>
-    <div class="text-black ">
+    <div class="text-black bg-gray-100">
         <div class="">
             <slot></slot>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex bg-stone-900">
         <div class="mx-auto">
             <a href="https://coded.tj/" >
                 <img class="h-12 my-5" src="/images/coded.svg">
