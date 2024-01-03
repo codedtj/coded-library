@@ -79,7 +79,7 @@ function getTypeName(type) {
 
                         </div>
                         <button
-                            class="inline-flex items-center py-2.5 px-3 mt-3 md:mt-0 md:ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 w-full md:w-32 text-center"
+                            class="inline-flex items-center py-2.5 px-3 mt-3 md:mt-0 md:ml-2 text-sm font-medium text-white bg-black rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 w-full md:w-32 text-center"
                             type="submit">
                             <svg class="mr-2 -ml-1 w-5 h-5" fill="none" stroke="currentColor"
                                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

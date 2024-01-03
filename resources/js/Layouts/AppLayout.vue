@@ -67,31 +67,18 @@
                                 </div>
                                 <div>
                                     <nav class="grid row-gap-8 gap-5 font-bold text-white">
-                                        <Link href="#"
-                                              class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
-                                            <div class="text-base leading-6 ">
-                                                Home
-                                            </div>
+                                        <Link href="/">
+                                            <MobileMenuButton>Home</MobileMenuButton>
                                         </Link>
-                                        <Link href="/search"
-                                              class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
-                                            <div class="text-base leading-6  ">
-                                                Search
-                                            </div>
+                                        <Link href="/search">
+                                            <MobileMenuButton>Search</MobileMenuButton>
                                         </Link>
-                                        <Link href="/about"
-                                              class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
-                                            <div class="text-base leading-6  ">
-                                                About
-                                            </div>
+                                        <Link href="/about">
+                                            <MobileMenuButton>About</MobileMenuButton>
                                         </Link>
-                                        <Link href="/contact"
-                                              class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
-                                            <div class="text-base leading-6  ">
-                                                Contact Us
-                                            </div>
+                                        <Link href="/contact">
+                                            <MobileMenuButton>Contact Us</MobileMenuButton>
                                         </Link>
-
                                     </nav>
                                 </div>
                             </div>
@@ -127,7 +114,7 @@
     <div class="flex bg-stone-900">
         <div class="mx-auto">
             <a href="https://coded.tj/" >
-                <img class="h-12 my-5" src="/images/coded.svg">
+                <img class="h-12 my-5" src="/images/coded-white.svg">
             </a>
         </div>
     </div>
@@ -138,6 +125,7 @@
 
 import {ref} from "vue";
 import {Head, Link} from "@inertiajs/vue3";
+import MobileMenuButton from "@/Components/custom/MobileMenuButton.vue";
 
 const mobileMenuOpen = ref(false);
 
